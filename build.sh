@@ -12,4 +12,7 @@ python $run_dir/build_movie_data.py $1/tags.csv $1/movies.csv > $target_dir/movi
 #build 用户数据
 python $run_dir/build_user_data.py $1/ratings.csv $1/tags.csv > $target_dir/user_info.jsons
 
+#筛选大众电影，小众电影
+python $run_dir/select_movies.py $target_dir/user_info.jsons > $target_dir/movie_popular.json 
+
 
